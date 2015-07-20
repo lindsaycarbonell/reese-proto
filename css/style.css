@@ -1,10 +1,22 @@
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300);
 @import url(http://fonts.googleapis.com/css?family=Dancing+Script:400,700);
+@font-face{
+  font-family:'theboldfont';
+  src:url('../fonts/theboldfont.ttf');
 
-html, body, #map-canvas{ 
+}
+html, body, #map-canvas{
   height: 100%; margin: 0; padding: 0;
 }
 
+.no-pads{
+  padding:0;
+}
+
+.fifteen-margs{
+  margin-left:15%;
+  margin-right:15%;
+}
 
 .btn{
   height:80px;
@@ -14,10 +26,13 @@ html, body, #map-canvas{
 
 h1{
   text-align:center;
-  font-family:'Oswald';
+  font-family:'theboldfont';
   font-weight:200;
   font-size:45pt;
   margin-bottom:30px;
+}
+h4{
+  text-align:center;
 }
 .script{
   font-family:'Dancing Script';
