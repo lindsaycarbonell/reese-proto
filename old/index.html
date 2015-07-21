@@ -1,0 +1,59 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet" />
+<script src="js/clickers.js"></script>
+<style>
+@font-face{
+  font-family:'theboldfont';
+  src:url('fonts/theboldfont.ttf');
+}
+h1, span, div{
+  font-family:'theboldfont';
+}
+</style>
+</head>
+
+
+<body>
+
+  <header>
+    <div><h1><span style="color:#569CD4;" id="blue">Blue</span> Wagon</h1>
+  </header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-md-6">
+      <div class="embed-container"><iframe src="maptest.html" style="width:470px;height:450px;overflow:hidden;"></iframe></div>
+</div>
+<div class="col-lg-6 col-md-6">
+      <iframe width="420" height="315" id="main-frame"  src="https://www.youtube.com/embed/kDCoQe3lPLw" frameborder="0" allowfullscreen></iframe>
+      <hr>
+      <div class="row">
+        <div class="col-lg-2 col-sm-2" style="margin-right:15px;">
+          <img src="assets/magnify.png" onclick="changeFrame(this.id)" class="btn" id="btn-lake">
+        </div><!--1-->
+        <div class="col-lg-2 col-sm-2" style="margin-right:15px;">
+          <img src="assets/car.png" onclick="changeFrame(this.id)" class="btn" id="btn-driving">
+        </div><!--2-->
+        <div class="col-lg-2 col-sm-2"  style="margin-right:15px;">
+          <img src="assets/icecream.png" onclick="changeFrame(this.id)" class="btn" id="btn-mapleview">
+        </div><!--3-->
+        <div class="col-lg-2 col-sm-2"  style="margin-right:15px;">
+          <img src="assets/pool.png" onclick="changeFrame(this.id)" class="btn" id="btn-pool">
+        </div><!--4-->
+        <div class="col-lg-2 col-sm-2"  style="margin-right:15px;">
+          <img src="assets/walk.png" onclick="changeFrame(this.id)" class="btn" id="btn-greenway">
+        </div><!--5-->
+
+      </div><!--end inner row-->
+    </div>
+    </div><!--end row-->
+
+</div>
+
+
+</body>
+
+    </html>

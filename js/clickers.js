@@ -6,6 +6,7 @@ function changeFrame(clicked_id){
     }
     else if(clicked_id == "btn-driving"){
       document.getElementById("main-frame").setAttribute('src','https://www.youtube.com/embed/yyUK1DSPLWI')
+
     }
     else if(clicked_id == "btn-mapleview"){
       document.getElementById("main-frame").setAttribute('src','https://www.youtube.com/embed/qUS-yaib7fU')
