@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet" tpe="text/css" />
-    <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6ps2rwH6fH_WFh_V43kJQT5sTS9j3ykA">
-    </script>
-    <script type="text/javascript">
-
       //for directions
       var directionsDisplay;
       var directionsService = new google.maps.DirectionsService();
@@ -96,7 +85,12 @@
             position: drivingCar,
             map: map,
             icon: carImg
+            // title:btn-driving
+            //id:'btn-driving'
         });
+
+        // drivingCarMarker.metadata({type: "point", id: "btn-driving"});
+        // drivingCarMarker.setValues({type: "point", onClick: "changeFrame(this.id)"});
 
         var poolLocationMarker = new google.maps.Marker({
             position: poolLocation,
@@ -126,26 +120,32 @@
         //listeners to open boxes when icons are clicked
         google.maps.event.addListener(mainHouseMarker, 'click', function() {
             homeBox.open(map,mainHouseMarker);
+            
         });
 
         google.maps.event.addListener(drivingCarMarker, 'click', function() {
             carBox.open(map,drivingCarMarker);
+            changeFrame("btn-driving");
         });
 
         google.maps.event.addListener(poolLocationMarker, 'click', function() {
             poolBox.open(map,poolLocationMarker);
+            changeFrame("btn-pool");
         });
 
         google.maps.event.addListener(greenWayMarker, 'click', function() {
             walkBox.open(map,greenWayMarker);
+            changeFrame("btn-greenway");
         });
 
         google.maps.event.addListener(lakeZoomMarker, 'click', function() {
             lakeBox.open(map,lakeZoomMarker);
+            changeFrame("btn-lake");
         });
 
         google.maps.event.addListener(mapleViewMarker, 'click', function() {
             mapleviewBox.open(map,mapleViewMarker);
+            changeFrame("btn-mapleview");
         });
 
 
@@ -188,7 +188,26 @@
         });
       };
 
-      
+      function changeFrame(clicked_id){
+        console.log("change frame");
+          if(clicked_id == "btn-lake"){
+            document.getElementById("main-frame").setAttribute('src','https://www.youtube.com/embed/GEIgTjmUYSI')
+          }
+          else if(clicked_id == "btn-driving"){
+            document.getElementById("main-frame").setAttribute('src','https://www.youtube.com/embed/yyUK1DSPLWI')
+          }
+          else if(clicked_id == "btn-mapleview"){
+            document.getElementById("main-frame").setAttribute('src','https://www.youtube.com/embed/qUS-yaib7fU')
+          }
+          else if(clicked_id == "btn-pool"){
+            document.getElementById("main-frame").setAttribute('src','https://www.youtube.com/embed/JLEuyAlfIxg')
+          }
+          else if(clicked_id == "btn-greenway"){
+            document.getElementById("main-frame").setAttribute('src','https://www.youtube.com/embed/4p_fimXCn2E')
+          }
+
+      }
+
       google.maps.event.addDomListener(window, 'load', initialize);
 
 
@@ -201,7 +220,7 @@
       var destinationB = new google.maps.LatLng(50.087692, 14.421150);
 
       var service = new google.maps.DistanceMatrixService();
-      
+
 
       function callback(response, status) {
         if (status == google.maps.DistanceMatrixStatus.OK) {
@@ -222,31 +241,3 @@
         console.log("duration: " + duration);
       }
     }
-
-    </script>
-  </head>
-  <body>
-  <div class="container">
-
-    <div class="row">
-      <div class="col-lg-12 col-sm-12">
-      <div id="panel">
-        <b>Locations of interest: </b>
-      <select id="start" onchange="calcRoute();">
-        <option> </option>
-        <option value="35.976848,-79.138885">MapleView</option>
-      </select>
-    </div><!--end col-->
-  </div><!--end row-->
-
-  <div class="row">
-      <div class="col-lg-12 col-sm-12">
-      <div id="map-canvas" style="height:450px;"></div>
-      <div id="duration">Duration: </div>
-      <div id="distance">Distance: </div>
-    </div><!--end col-->
-  </div><!--end row-->
-
-</div><!--end container-->
-  </body>
-</html>

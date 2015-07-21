@@ -8,7 +8,13 @@
 html, body, #map-canvas{
   height: 100%; margin: 0; padding: 0;
 }
-
+#blue{
+  color:#569CD4;
+}
+#logo-full{
+  height:200px;
+  width:auto;
+}
 .no-pads{
   padding:0;
 }
@@ -32,10 +38,35 @@ h1{
   margin-bottom:30px;
 }
 h4{
-  text-align:center;
+  font-family:'theboldfont';
+}
+
+a:hover{
+  text-decoration:none;
+  color:black;
+}
+div > p, div > h4{
+  text-decoration:none;
+  color:black;
 }
 .script{
   font-family:'Dancing Script';
   font-size:60pt;
   color:green;
+}
+
+#btn-driving{
+  border:6px solid black;
+}
+
+
+@media (max-width: 600px) {
+  .fifteen-margs {
+    margin-left:4%;
+    margin-right:4%;
+  }
+  #logo-full{
+    width:300px;
+    height:auto;
+  }
 }

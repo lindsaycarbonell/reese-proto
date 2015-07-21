@@ -1,5 +1,6 @@
 function changeFrame(clicked_id){
   console.log("change frame");
+
     if(clicked_id == "btn-lake"){
       document.getElementById("main-frame").setAttribute('src','https://www.youtube.com/embed/GEIgTjmUYSI')
     }
