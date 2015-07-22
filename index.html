@@ -11,97 +11,120 @@
 
 <body>
 
-  <!--NEED TO WRAP EVERYTHING IN SOMETHING-->
-<div class="container-fluid">
-<header>
-
-<div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-3 col-md-9 col-md-offset-2 col-sm-9 col-sm-offset-2 col-xs-9 col-xs-offset-2">
-      <!-- <div class="col-lg-10 col-lg-offset-2"> -->
-<img id="logo-full" src="assets/logo-full.png"/>
-      </div>
-
-    </div>
-  </div>
-
-</header>
-
-<div class="container fifteen-margs">
-  <div class="row"><!--big wrapper-->
-    <div class="col-lg-7 col-md-7 col-sm-7">
+  <!--HEADER CONTAINER-->
+  <div class="container">
       <div class="row">
-        <div class="col-lg-12 col-md-12 no-pads">
-          <div class="row">
-            <div class="col-lg-12 col-sm-12">
-              <div id="panel"><b>Locations of interest:</b>
-                <select id="start" onchange="calcRoute();">
-                  <option> </option>
-                  <option value="35.976848,-79.138885">MapleView</option>
-                </select>
-              </div><!--end panel-->
-            </div><!--end col-->
-          </div><!--end row-->
-          <div class="row">
-            <div class="col-lg-12 col-sm-12">
-              <div id="map-canvas" style="height:450px;"></div>
-              <!-- <div id="duration">Duration: </div>
-              <div id="distance">Distance: </div> -->
-              <p>Instructions: Click on an icon to get the mini video. Refresh the page to view the neighborhood video.</p>
-            </div><!--end col-->
-          </div><!--end row-->
-      <!-- <div class="embed-container"><iframe src="maptest.html" style="width:100%;height:450px;overflow:hidden;"></iframe></div> -->
+        <div class="max-width col-lg-10 col-lg-offset-2 col-md-10 col-md-offset-2 col-sm-12">
+          <!-- <h1>N.C. Congresspeople by the Numbers</h1> -->
+          <img id="logo-full" src="assets/logo-full.png"/>
+        </div><!--end col-->
+      </div><!--end row-->
+        <!-- <div class="max-width col-lg-10 col-lg-offset-2 col-md-10 col-md-offset-2 col-sm-12">
+          <p class="byline">April 1, 2014 12:00 AM ET</p>
+        </div> -->
+  </div><!--end container-->
+  <!--END HEADER CONTAINER-->
+
+
+  <!--INTRO CONTAINER-->
+  <div class="container">
+      <div class="row">
+        <div class="max-width col-lg-10 col-lg-offset-2 col-md-10 col-md-offset-2 col-sm-12">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at eleifend turpis. Praesent fringilla nec neque sit amet mollis. Aliquam hendrerit, eros ut hendrerit venenatis, libero eros tincidunt lorem, in feugiat nisi felis in enim. Aliquam erat volutpat. Quisque rutrum nisl id leo tempor, non iaculis tellus faucibus. Etiam congue tellus ex, sed rhoncus massa cursus eu.</p>
+        </div>
+
+      </div><!--end row-->
+
+        </div><!--end col-->
+
+      </div><!--end row-->
+
+      <hr class="max-width">
+
+  </div>
+  <!--END INTRO CONTAINER-->
+
+  <!--MAIN CONTAINER-->
+  <div class="container">
+
+    <!--ROW 1-->
+<div class="row">
+  <div class="max-width col-lg-10 col-lg-offset-2 col-md-10 col-md-offset-2 col-sm-12">
+    <div class="row">
+      <div class="col-lg-7 col-md-7 col-sm-7"><!--BIG LEFT-->
+        <div class="row">
+          <div class="col-lg-12 col-md-12 no-pads">
+            <div class="row">
+              <div class="col-lg-12 col-sm-12">
+                <div id="panel"><b>Locations of interest:</b>
+                  <select id="start" onchange="calcRoute();">
+                    <option> </option>
+                    <option value="35.976848,-79.138885">MapleView</option>
+                  </select>
+                </div><!--end panel-->
+              </div><!--end col-->
+            </div><!--end row-->
+            <div class="row">
+              <div class="col-lg-12 col-sm-12">
+                <div id="map-canvas" style="height:450px;"></div>
+                <!-- <div id="duration">Duration: </div>
+                <div id="distance">Distance: </div> -->
+                <p>Instructions: Click on an icon to get the mini video. Refresh the page to view the neighborhood video.</p>
+              </div><!--end col-->
+            </div><!--end row-->
       </div><!--end big col-->
     </div><!--end row-->
 
-<div class="row">
-<div class="col-lg-12 col-md-12 no-pads">
-      <iframe width="100%" height="315" id="main-frame"  src="https://www.youtube.com/embed/kDCoQe3lPLw" frameborder="0" allowfullscreen></iframe>
+<div class="row"><!--VIDEO ROW-->
+      <div class="col-lg-12 col-md-12 no-pads">
+        <iframe width="100%" height="315" id="main-frame"  src="https://www.youtube.com/embed/kDCoQe3lPLw" frameborder="0" allowfullscreen></iframe>
+      </div><!--end col-->
+    </div><!--end video row-->
+</div><!--end big left-->
+
+  <div class="col-lg-5 col-md-5 col-sm-5"><!--BIG RIGHT-->
+    <div class="col-lg-6 col-md-6 col-sm-6 no-pads" style="background-color:#ccc;border-radius:3px;padding:10px;">
+      <a href="#"><div style="padding:10px;">
+        <h4>The Morrison Plan, South Grove</h4>
+      <p>$749,900</p>
+      <p>4 bds - 3.5 ba - 3,950+ sqft</p>
+      </div></a>
+
+      <hr style="margin:0;">
+
+      <h4>308 Eastwood Rd, Chapel Hill, NC</h4>
+      <p>$178,000</p>
+      <p>3 bds - 2 ba - 1,230 sqft</p>
+      <hr>
+
+      <h4>56 Clarence Ln, Pittsboro, NC</h4>
+      <p>$595,900</p>
+      <p>4 bds - 4 ba - 3,677 sqft</p>
+      <hr>
+
+      <h4>307 Eastwood Rd #B, Chapel Hill, NC</h4>
+      <p>$178,000</p>
+      <p>3 bds - 2 ba - 1,230 sqft</p>
+      <hr>
+
+      <h4>The Morrison Plan, South Grove</h4>
+      <p>$749,900</p>
+      <p>4 bds - 3.5 ba - 3,950+ sqft</p>
+
 
     </div>
-    </div><!--end row-->
-</div><!--end big 6 #1-->
 
-<div class="col-lg-5 col-md-5 col-sm-5">
-  <div class="col-lg-6 col-md-6 col-sm-6 no-pads" style="background-color:#ccc;border-radius:3px;padding:10px;">
-    <a href="#"><div style="padding:10px;">
-      <h4>The Morrison Plan, South Grove</h4>
-    <p>$749,900</p>
-    <p>4 bds - 3.5 ba - 3,950+ sqft</p>
-    </div></a>
-
-    <hr style="margin:0;">
-
-    <h4>308 Eastwood Rd, Chapel Hill, NC</h4>
-    <p>$178,000</p>
-    <p>3 bds - 2 ba - 1,230 sqft</p>
-    <hr>
-
-    <h4>56 Clarence Ln, Pittsboro, NC</h4>
-    <p>$595,900</p>
-    <p>4 bds - 4 ba - 3,677 sqft</p>
-    <hr>
-
-    <h4>307 Eastwood Rd #B, Chapel Hill, NC</h4>
-    <p>$178,000</p>
-    <p>3 bds - 2 ba - 1,230 sqft</p>
-    <hr>
-
-    <h4>The Morrison Plan, South Grove</h4>
-    <p>$749,900</p>
-    <p>4 bds - 3.5 ba - 3,950+ sqft</p>
-
-
-  </div>
-
-</div><!--end big 6 #2-->
+</div><!--end big right-->
 
   </div><!--end big wrapper-->
-
-
-</div><!--end container-->
-
 </div>
+</div>
+</div>
+
+
+
+
+
 
 <script src="js/mapper.js"></script>
 <script src="js/clickers.js"></script>
