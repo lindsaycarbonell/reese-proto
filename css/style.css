@@ -9,7 +9,9 @@
 .max-width{
   max-width:1000px;
 }
-
+#big-right{
+  margin-top:20px;
+}
 
 html, body, #map-canvas{
   height: 100%; margin: 0; padding: 0;
