@@ -5,6 +5,13 @@
   src:url('../fonts/theboldfont.ttf');
 
 }
+
+img{
+  height:5px;
+  width:5px;
+}
+
+
 html, body, #map-canvas{
   height: 100%; margin: 0; padding: 0;
 }
