@@ -1,0 +1,163 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script type="text/javascript"
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6ps2rwH6fH_WFh_V43kJQT5sTS9j3ykA">
+</script>
+<script src="js/mapper.js"></script>
+<script src="js/clickers.js"></script>
+<link href="css/style.css" rel="stylesheet" />
+</head>
+
+
+<body>
+
+  <!--HEADER CONTAINER-->
+  <div class="container">
+      <div class="row">
+        <div class="max-width col-lg-10 col-lg-offset-2 col-md-10 col-md-offset-2 col-sm-12">
+          <img id="logo-full" src="assets/logo-full.png"/>
+        </div><!--end col-->
+      </div><!--end row-->
+
+  </div><!--end container-->
+  <!--END HEADER CONTAINER-->
+
+
+  <!--INTRO CONTAINER-->
+  <div class="container">
+      <div class="row">
+        <div class="max-width col-lg-10 col-lg-offset-2 col-md-10 col-md-offset-2 col-sm-12">
+          <!--stuff could go here-->
+        </div>
+
+      </div><!--end row-->
+
+        </div><!--end col-->
+
+      </div><!--end row-->
+
+      <!-- <hr class="max-width"> -->
+
+  </div>
+  <!--END INTRO CONTAINER-->
+
+  <!--MAIN CONTAINER-->
+  <div class="container">
+
+    <!--ROW 1-->
+<div class="row">
+  <div class="max-width col-lg-10 col-lg-offset-2 col-md-10 col-md-offset-2 col-sm-12">
+    <div class="row">
+      <div class="col-lg-7 col-md-7 col-sm-7"><!--BIG LEFT-->
+        <div class="row">
+          <div class="col-lg-12 col-md-12 no-pads">
+            <div class="row" style="margin-bottom:10px;">
+              <div class="col-lg-12 col-sm-12">
+                <div id="panel"><b>Locations of interest:</b>
+
+                  <select id="start" onchange="calcRoute();">
+                    <option> </option>
+                    <option value="35.976848,-79.138885">MapleView</option>
+                  </select>
+                </div><!--end panel-->
+              </div><!--end col-->
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div id="address-panel">
+                  <input id="address" type="textbox" value="add a location" onfocus="if (this.value=='add a location') this.value='';"/>
+                  <input id="geocode" type="button" value="Add" onclick="codeAddress()">
+                </div>
+              </div><!--end col-->
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <button id="recenter">Center</button>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <button onclick="location.reload();" id="refresh">Refresh</button>
+              </div>
+            </div><!--end row-->
+
+
+
+            <div class="row">
+              <div class="col-lg-12 col-sm-12">
+                <div id="map-canvas" style="height:450px;"></div>
+                <!-- <div id="duration">Duration: </div>
+                <div id="distance">Distance: </div> -->
+                <p>Instructions: Click on an icon to get the mini video. Refresh the page to view the neighborhood video.</p>
+              </div><!--end col-->
+            </div><!--end row-->
+      </div><!--end big col-->
+    </div><!--end row-->
+
+
+
+
+
+
+<div class="row"><!--VIDEO ROW-->
+      <div class="col-lg-12 col-md-12 no-pads">
+        <iframe width="100%" height="315" id="main-frame"  src="https://www.youtube.com/embed/kDCoQe3lPLw?rel=0" frameborder="0" allowfullscreen></iframe>
+      </div><!--end col-->
+    </div><!--end video row-->
+    /
+</div><!--end big left-->
+
+
+
+  <div class="col-lg-5 col-md-5 col-sm-5" id="big-right" style="height:815px;overflow:scroll;"><!--BIG RIGHT-->
+    <div class="col-lg-10 col-md-10 col-sm-10 no-pads" style="  background-color:#569CD4;border-radius:3px;padding:10px;">
+      <a href="#"><div style="padding:10px;">
+        <h4>The Morrison Plan, South Grove</h4>
+        <img src="assets/house1.png" style="height:100px;width:auto;"/>
+      <p>$749,900</p>
+      <p>4 bds - 3.5 ba - 3,950+ sqft</p>
+      </div></a>
+
+      <hr style="margin:0;">
+
+      <h4>308 Eastwood Rd, Chapel Hill, NC</h4>
+      <img src="assets/house2.png" style="height:100px;width:auto;"/>
+      <p>$178,000</p>
+      <p>3 bds - 2 ba - 1,230 sqft</p>
+      <hr>
+
+      <h4>56 Clarence Ln, Pittsboro, NC</h4>
+      <img src="assets/house3.png" style="height:100px;width:auto;"/>
+      <p>$595,900</p>
+      <p>4 bds - 4 ba - 3,677 sqft</p>
+      <hr>
+
+      <h4>307 Eastwood Rd #B, Chapel Hill, NC</h4>
+      <img src="assets/house1.png" style="height:100px;width:auto;"/>
+      <p>$178,000</p>
+      <p>3 bds - 2 ba - 1,230 sqft</p>
+      <hr>
+
+      <h4>The Morrison Plan, South Grove</h4>
+      <img src="assets/house2.png" style="height:100px;width:auto;"/>
+      <p>$749,900</p>
+      <p>4 bds - 3.5 ba - 3,950+ sqft</p>
+
+
+    </div>
+
+</div><!--end big right-->
+
+  </div><!--end big wrapper-->
+</div>
+</div>
+</div>
+
+
+
+
+
+
+<script src="js/mapper.js"></script>
+<script src="js/clickers.js"></script>
+<script src="js/velocity.min.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+</body>
+
+    </html>

@@ -13,6 +13,8 @@
       var start;
       var end = mainHouse;
 
+      var geocoder;
+
 
       //basic map options
       var mapOptions = {
@@ -84,6 +86,7 @@
 
 
       function initialize() {
+        geocoder = new google.maps.Geocoder();
         directionsDisplay = new google.maps.DirectionsRenderer();
         directionsDisplay.setOptions({suppressMarkers:true});
 
@@ -102,6 +105,7 @@
         google.maps.event.addListener(mainHouseMarker, 'click', function() {
             bigBox.setContent(homeString);
             bigBox.open(map,mainHouseMarker);
+            changeFrame("btn-house");
             //changeFrame()...
         });
 
@@ -141,6 +145,11 @@
           center = map.getCenter();
         }
 
+        $('#recenter').click(function(){
+          map.setCenter(center);
+          map.setZoom(15);
+        });
+
         google.maps.event.addDomListener(map, 'idle', function() {
         calculateCenter();
           });
@@ -149,6 +158,27 @@
           });
 
       }
+
+
+
+      //GEOCODER
+      function codeAddress(){
+        var address = document.getElementById('address').value;
+        if (address=="add a location"){
+          alert('Please enter an address');
+        }
+        geocoder.geocode({'address': address}, function(results, status) {
+          if (status == google.maps.GeocoderStatus.OK) {
+            map.setCenter(results[0].geometry.location);
+            var marker = new google.maps.Marker({
+                map: map,
+                position: results[0].geometry.location
+            });
+          } else {
+            alert('Please add an address');
+          }
+              });
+        }
 
       //ROUTE CALCULATION
       function calcRoute(){
@@ -177,26 +207,6 @@
             }, callback);
         });
       };
-
-      function changeFrame(clicked_id){
-        console.log("change frame");
-          if(clicked_id == "btn-lake"){
-            document.getElementById("main-frame").setAttribute('src','https://www.youtube.com/embed/GEIgTjmUYSI')
-          }
-          else if(clicked_id == "btn-driving"){
-            document.getElementById("main-frame").setAttribute('src','https://www.youtube.com/embed/yyUK1DSPLWI')
-          }
-          else if(clicked_id == "btn-mapleview"){
-            document.getElementById("main-frame").setAttribute('src','https://www.youtube.com/embed/qUS-yaib7fU')
-          }
-          else if(clicked_id == "btn-pool"){
-            document.getElementById("main-frame").setAttribute('src','https://www.youtube.com/embed/JLEuyAlfIxg')
-          }
-          else if(clicked_id == "btn-greenway"){
-            document.getElementById("main-frame").setAttribute('src','https://www.youtube.com/embed/4p_fimXCn2E')
-          }
-
-      }
 
       google.maps.event.addDomListener(window, 'load', initialize);
 
