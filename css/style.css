@@ -1,126 +1,41 @@
-@import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300);
-@import url(http://fonts.googleapis.com/css?family=Dancing+Script:400,700);
+/*put font in font folder and reference here*/
 @font-face{
-  font-family:'theboldfont';
-  src:url('../fonts/theboldfont.ttf');
-
+  font-family:'';
+  src:url('');
 }
 
-#panel{
-  margin-bottom:10px;
-  font-family:theboldfont;
-}
-#address{
-  margin-right:5px;
-}
-button{
-  border-radius:5px;
-  border: 2px solid black;
-  background-color:#569CD4;
-  color:#F4FFF9;
-  font-weight:bold;
-}
-[value=Add]{
-  border-radius:5px;
-  border: 2px solid black;
-  background-color:#569CD4;
-  color:#F4FFF9;
-  font-weight:bold;
-}
-
-.max-width{
-  max-width:1000px;
+#big-left{
+  left:-10px;
 }
 #big-right{
   margin-top:68px;
-
 }
-
-#address-panel{
-  min-width:260px;
+#map-wrap{
+  background-color:#569CD4;
+  border-radius:3px;
+  padding:10px;
+  margin-top:68px;
 }
-#recenter{
-  vertical-align:bottom;
+#map-canvas{
+  height:312px!important;
 }
-#geocode{
-  vertical-align:bottom;
+#instructions{
+  /*SET FONT, COLOR, FOR INSTRUCTIONS HERE*/
 }
-#refresh{
-  vertical-align:bottom;
+#main-frame-wrap{
+  background-color:#569CD4;
+  border-radius:3px;
+  padding:10px;
 }
-
 
 html, body, #map-canvas{
   height: 100%; margin: 0; padding: 0;
 }
-#blue{
-  color:#569CD4;
-}
-#logo-full{
-  height:200px;
-  width:auto;
+
+/*standard styles*/
+.max-width{
+  max-width:1000px;
 }
 .no-pads{
   padding:0;
-}
-
-.fifteen-margs{
-  margin-left:15%;
-  margin-right:15%;
-}
-
-.btn{
-  height:80px;
-  width:80px;
-  text-align:center;
-}
-
-h1{
-  text-align:center;
-  font-family:'theboldfont';
-  font-weight:200;
-  font-size:45pt;
-  margin-bottom:30px;
-}
-h4{
-  font-family:'theboldfont';
-}
-
-a:hover{
-  text-decoration:none;
-  color:black;
-}
-div > p, div > h4{
-  text-decoration:none;
-  color:black;
-}
-.script{
-  font-family:'Dancing Script';
-  font-size:60pt;
-  color:green;
-}
-
-#btn-driving{
-  border:6px solid black;
-}
-
-
-@media (max-width: 600px) {
-  .fifteen-margs {
-    margin-left:4%;
-    margin-right:4%;
-  }
-  #logo-full{
-    width:300px;
-    height:auto;
-  }
-  /*#address-panel{
-    margin-right:20px;
-  }*/
-  #recenter{
-    margin-left:20px;
-    width:80px;
-    /*font-size:9pt;
-    vertical-align:text-bottom;*/
-  }
 }
