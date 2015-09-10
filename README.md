@@ -1,4 +1,4 @@
-Blue Wagon is a product produced by Reese News Lab at the University of North Carolina at Chapel Hill. Founders of the project: Lindsay Carbonell, Kendra Benner, Danny Nett and Li Zhang. More information about this project can be found <a href="http://reesenewslab.org/projects/blue-wagon/">here</a>. 
+Blue Wagon is a product produced by Reese News Lab at the University of North Carolina at Chapel Hill. Founders of the project: Lindsay Carbonell, Kendra Benner, Danny Nett and Li Zhang. More information about this project can be found <a href="http://reesenewslab.org/projects/blue-wagon/">here</a>. Videography by <a href="https://vimeo.com/jordanmiron">Jordan Miron</a> and <a href="http://lexinamer.com/">Lexi Namer</a>. Video editing by Jordan Miron, Lindsay Carbonell, and Kendra Benner.
 
 <h3>Instructions for Web Developer</h3> 
 
